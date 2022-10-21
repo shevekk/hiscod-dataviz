@@ -17,7 +17,7 @@ Site du projet Hiscod : https://www.unicaen.fr/hiscod/accueil.html
 
 ![Événements par jour en 1848 par pays](http://www.datavizdev.fr:7200/img/1848_par_pays.png "Événements par jour en 1848 par pays")
 
-![Événements par mois de la révolution française par mois](http://www.datavizdev.fr:7200/img/revFR_regions.png "Événements par mois de la révolution française par mois")
+![Événements par mois de la révolution française par régions](http://www.datavizdev.fr:7200/img/revFR_regions.png "Événements par mois de la révolution française par régions")
 
 ![Événements par types de la révolution française (vue circulaire)](http://www.datavizdev.fr:7200/img/types_events_refFR.png "Événements par types de la révolution française (vue circulaire)")
 
