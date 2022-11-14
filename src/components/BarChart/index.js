@@ -24,6 +24,10 @@ function BarChart({ groupSize, propName, subPropName, secondSubPropName, thirdSu
   let titleDetails = data.text ? `${data.text[data.lang]["CHART_YEARS1"]} ${groupSize} ${data.text[data.lang]["CHART_YEARS2"]}` : "";
 
   useEffect(() => {
+
+    types = [];
+    categories = [];
+
     // Create categories
     for(let i = yearMin; i <= yearMax; i+=parseInt(groupSize)) {
       let maxDate = (i + (groupSize-1));
@@ -32,7 +36,7 @@ function BarChart({ groupSize, propName, subPropName, secondSubPropName, thirdSu
         maxDate = yearMax;
       }
 
-      if(groupSize === 1) {
+      if(groupSize === 1 || groupSize === "1") {
         categories.push(i);
       }
       else {

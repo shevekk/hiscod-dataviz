@@ -211,7 +211,7 @@ th {
   align-items: center;
   padding-top: 10px;
   padding-bottom: 7px;
-  height : 156px;
+  /* height : 156px; */
   background-color: #649CBF;
   color : #f2f2f2;
   border-radius : 0px 0px 8px 8px;

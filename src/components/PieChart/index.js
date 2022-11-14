@@ -22,6 +22,9 @@ function PieChart({ propName, subPropName, secondSubPropName, thirdSubPropName, 
   let subTypes = [];
 
   useEffect(() => {
+    types = [];
+    subTypes = [];
+
     let propNameSelected = propName;
     let subPropNameSelected = subPropName;
     

@@ -78,6 +78,9 @@ function LinesChart({ groupSize, propName, subPropName, secondSubPropName, third
 
   useEffect(() => {
 
+    types = [];
+    categories = [];
+
     // Create detail of title
     let titleDetails = "";
     if(groupSize === "month") {
@@ -149,7 +152,7 @@ function LinesChart({ groupSize, propName, subPropName, secondSubPropName, third
           maxDate = yearMax;
         }
 
-        if(groupSize === 1) {
+        if(groupSize === 1 || groupSize === "1") {
           categories.push(i);
         }
         else {

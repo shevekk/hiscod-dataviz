@@ -32,11 +32,23 @@ function Filter(props) {
   const [subTypes, setSubTypes] = useState([...new Set([""].concat(data.data.map(d => d.riot_type_original_database_1)))]);
   const [selectedSubType, setSelectedSubType] = useState("");
 
+  useEffect(() => {
+    setSubTypes([...new Set([""].concat(data.data.map(d => d.riot_type_original_database_1)))]);
+  }, [data.data]);
+
   // Change type selected and reload subType
   const onChangeType = (event) => {
     setSelectedType(event.target.value);
 
-    setSubTypes([...new Set([""].concat(data.data.filter(d => d.riot_type_hiscod === event.target.value).map(d => d.riot_type_original_database_1)))]);
+    if(event.target.value) {
+      setSubTypes([...new Set([""].concat(data.data.filter(d => d.riot_type_hiscod === event.target.value).map(d => d.riot_type_original_database_1)))]);
+    }
+    else {
+      let list = [...new Set([""].concat(data.data.map(d => d.riot_type_original_database_1)))];
+      console.log(list);
+      setSubTypes(list);
+      //setSubTypes([...new Set([""].concat(data.data.map(d => d.riot_type_original_database_1)))]);
+    }
   }
 
   // Change subType selected
